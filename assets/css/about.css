@@ -35,7 +35,7 @@ h1, h3, h4, h5, h6{
   /* text-transform: uppercase; */
   font-weight: bold;
   /* letter-spacing: 6px; */
-  color:#f5633b;
+  color:#65cf95;
 }
 
 h2 {
@@ -43,7 +43,7 @@ h2 {
   /* font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: bold;
   letter-spacing: 1px;
-  color:#f5633b;
+  color:#65cf95;
   line-height:28px;
 }
 
@@ -151,7 +151,7 @@ header p {
 }
 
 a {
-  color: #f5633b;
+  color: #65cf95;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -289,7 +289,7 @@ a:focus {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #f5633b;
+  background: #65cf95;
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -371,13 +371,13 @@ a:focus {
 
 
 .cd-timeline-img.cd-picture {
-  background: #f5633b;
+  background: #65cf95;
 }
 .cd-timeline-img.cd-movie {
-  background: #f5633b;
+  background: #65cf95;
 }
 .cd-timeline-img.cd-location {
-  background: #f5633b;
+  background: #65cf95;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
@@ -480,7 +480,7 @@ a:focus {
   clear: both;
 }
 .cd-timeline-content h2 {
-  color: #f5633b;
+  color: #65cf95;
 }
 
 .cd-timeline-content h2 span{
@@ -503,8 +503,8 @@ a:focus {
   float: right;
   padding: .8em 1em;
   background: transparent;
-  color: #f5633b;
-  border:1px solid #f5633b;
+  color: #65cf95;
+  border:1px solid #65cf95;
 
 }
 .no-touch .cd-timeline-content .cd-read-more:hover {
