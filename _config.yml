@@ -1,0 +1,36 @@
+title: change.name
+description: > # this means to ignore newlines until "baseurl:"
+  Save time when updating your new name with institutions, banks and companies.
+permalink: ':title'
+# permalink: ':title'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://changename.tk" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: changedotname #if your site has a twitter account, enter it here
+
+# Author Settings
+author: change.name # add your name
+author-img: # add your photo
+about-author: # add description
+social-twitter: changedotname # add your Twitter handle
+social-instagram: changedotname # add your Instagram handle
+social-github: changedotname # add your Github handle
+social-linkedin: changedotname # add your Linkedin handle
+social-email: changedotname@gmail.com # add your Email address
+
+# Disqus
+discus-identifier: changedotname # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins_dir:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
