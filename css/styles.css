@@ -166,6 +166,36 @@ a.white {
   text-decoration: none;
 }
 
+.bronze {
+  border-color: #824a02;
+  background-color: #a77044;
+  color: #fff;
+}
+
+.bronze:hover {
+  color: #824a02;
+}
+
+.silver {
+  border-color: #d7d7d7;
+  background-color: #a7a7ad;
+  color: #fff;
+}
+
+.silver:hover {
+  color: #d7d7d7;
+}
+
+.gold {
+  border-color: #fee101;
+  background-color: #d6af36;
+  color: #fff;
+}
+
+.gold:hover {
+  color: #fee101;
+}
+
 .btn-solid-lg {
   display: inline-block;
   padding: 1.375rem 2.625rem 1.375rem 2.625rem;
@@ -678,7 +708,7 @@ input[type="checkbox"] {
 }
 
 .navbar-custom .container {
-  max-width: 87.5rem;
+  max-width: 73.5rem;
 }
 
 .navbar-custom .navbar-brand.logo-image img {
