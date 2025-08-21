@@ -4,15 +4,15 @@
    Description: Custom JS file
 */
 
-(function($) {
+(function ($) {
   "use strict";
 
   /* Preloader */
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     var preloaderFadeOutTime = 500;
     function hidePreloader() {
       var preloader = $(".spinner-wrapper");
-      setTimeout(function() {
+      setTimeout(function () {
         preloader.fadeOut(preloaderFadeOutTime);
       }, 500);
     }
@@ -21,7 +21,7 @@
 
   /* Navbar Scripts */
   // jQuery to collapse the navbar on scroll
-  $(window).on("scroll load", function() {
+  $(window).on("scroll load", function () {
     if ($(".navbar").offset().top > 60) {
       $(".fixed-top").addClass("top-nav-collapse");
     } else {
@@ -30,8 +30,8 @@
   });
 
   // jQuery for page scrolling feature - requires jQuery Easing plugin
-  $(function() {
-    $(document).on("click", "a.page-scroll", function(event) {
+  $(function () {
+    $(document).on("click", "a.page-scroll", function (event) {
       var $anchor = $(this);
       $("html, body")
         .stop()
@@ -47,13 +47,8 @@
   });
 
   // closes the responsive menu on menu item click
-  $(".navbar-nav li a").on("click", function(event) {
-    if (
-      !$(this)
-        .parent()
-        .hasClass("dropdown")
-    )
-      $(".navbar-collapse").collapse("hide");
+  $(".navbar-nav li a").on("click", function (event) {
+    if (!$(this).parent().hasClass("dropdown")) $(".navbar-collapse").collapse("hide");
   });
 
   /* Image Slider - Swiper */
@@ -114,7 +109,7 @@
       patterns: {
         youtube: {
           index: "youtube.com/",
-          id: function(url) {
+          id: function (url) {
             var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
             if (!m || !m[1]) return null;
             return m[1];
@@ -123,7 +118,7 @@
         },
         vimeo: {
           index: "vimeo.com/",
-          id: function(url) {
+          id: function (url) {
             var m = url.match(
               /(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/
             );
@@ -151,7 +146,7 @@
 
   /* Move Form Fields Label When User Types */
   // for input and textarea fields
-  $("input, textarea").keyup(function() {
+  $("input, textarea").keyup(function () {
     if ($(this).val() != "") {
       $(this).addClass("notEmpty");
     } else {
@@ -162,7 +157,7 @@
   /* Sign Up Form */
   $("#signUpForm")
     .validator()
-    .on("submit", function(event) {
+    .on("submit", function (event) {
       if (event.isDefaultPrevented()) {
         // handle the invalid form...
         sformError();
@@ -184,16 +179,8 @@
     $.ajax({
       type: "POST",
       url: "php/signupform-process.php",
-      data:
-        "email=" +
-        email +
-        "&name=" +
-        name +
-        "&password=" +
-        password +
-        "&terms=" +
-        terms,
-      success: function(text) {
+      data: "email=" + email + "&name=" + name + "&password=" + password + "&terms=" + terms,
+      success: function (text) {
         if (text == "success") {
           sformSuccess();
         } else {
@@ -216,7 +203,7 @@
       .addClass("shake animated")
       .one(
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function() {
+        function () {
           $(this).removeClass();
         }
       );
@@ -228,16 +215,13 @@
     } else {
       var msgClasses = "h3 text-center";
     }
-    $("#smsgSubmit")
-      .removeClass()
-      .addClass(msgClasses)
-      .text(msg);
+    $("#smsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
 
   /* Log In Form */
   $("#logInForm")
     .validator()
-    .on("submit", function(event) {
+    .on("submit", function (event) {
       if (event.isDefaultPrevented()) {
         // handle the invalid form...
         lformError();
@@ -258,7 +242,7 @@
       type: "POST",
       url: "php/loginform-process.php",
       data: "email=" + email + "&password=" + password,
-      success: function(text) {
+      success: function (text) {
         if (text == "success") {
           lformSuccess();
         } else {
@@ -281,7 +265,7 @@
       .addClass("shake animated")
       .one(
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function() {
+        function () {
           $(this).removeClass();
         }
       );
@@ -293,16 +277,13 @@
     } else {
       var msgClasses = "h3 text-center";
     }
-    $("#lmsgSubmit")
-      .removeClass()
-      .addClass(msgClasses)
-      .text(msg);
+    $("#lmsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
 
   /* Newsletter Form */
   $("#newsletterForm")
     .validator()
-    .on("submit", function(event) {
+    .on("submit", function (event) {
       if (event.isDefaultPrevented()) {
         // handle the invalid form...
         nformError();
@@ -322,7 +303,7 @@
       type: "POST",
       url: "php/newsletterform-process.php",
       data: "email=" + email + "&terms=" + terms,
-      success: function(text) {
+      success: function (text) {
         if (text == "success") {
           nformSuccess();
         } else {
@@ -345,7 +326,7 @@
       .addClass("shake animated")
       .one(
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function() {
+        function () {
           $(this).removeClass();
         }
       );
@@ -357,16 +338,13 @@
     } else {
       var msgClasses = "h3 text-center";
     }
-    $("#nmsgSubmit")
-      .removeClass()
-      .addClass(msgClasses)
-      .text(msg);
+    $("#nmsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
 
   /* Privacy Form */
   $("#privacyForm")
     .validator()
-    .on("submit", function(event) {
+    .on("submit", function (event) {
       if (event.isDefaultPrevented()) {
         // handle the invalid form...
         pformError();
@@ -388,16 +366,8 @@
     $.ajax({
       type: "POST",
       url: "php/privacyform-process.php",
-      data:
-        "name=" +
-        name +
-        "&email=" +
-        email +
-        "&select=" +
-        select +
-        "&terms=" +
-        terms,
-      success: function(text) {
+      data: "name=" + name + "&email=" + email + "&select=" + select + "&terms=" + terms,
+      success: function (text) {
         if (text == "success") {
           pformSuccess();
         } else {
@@ -420,7 +390,7 @@
       .addClass("shake animated")
       .one(
         "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function() {
+        function () {
           $(this).removeClass();
         }
       );
@@ -432,19 +402,14 @@
     } else {
       var msgClasses = "h3 text-center";
     }
-    $("#pmsgSubmit")
-      .removeClass()
-      .addClass(msgClasses)
-      .text(msg);
+    $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
 
   /* Back To Top Button */
   // create the back to top button
-  $("body").prepend(
-    '<a href="body" class="back-to-top page-scroll">Back to Top</a>'
-  );
+  $("body").prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
   var amountScrolled = 700;
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > amountScrolled) {
       $("a.back-to-top").fadeIn("500");
     } else {
@@ -453,7 +418,7 @@
   });
 
   /* Removes Long Focus On Buttons */
-  $(".button, a, button").mouseup(function() {
+  $(".button, a, button").mouseup(function () {
     $(this).blur();
   });
 })(jQuery);
